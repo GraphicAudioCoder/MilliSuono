@@ -1,2 +1,0 @@
-/usr/bin/ar qc libMicroSuonoLib.a CMakeFiles/MicroSuonoLib.dir/src/miniaudio_impl.cpp.o
-/usr/bin/ranlib libMicroSuonoLib.a
