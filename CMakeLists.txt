@@ -1,4 +1,3 @@
-
 cmake_minimum_required(VERSION 3.10)
 project(MilliSuono)
 
@@ -17,6 +16,7 @@ add_custom_target(clean-all
 # Libreria statica (fix nome file)
 add_library(MilliSuonoLib STATIC
   src/miniaudio_impl.cpp
+  src/core/Node.cpp
 )
 target_include_directories(MilliSuonoLib PUBLIC
   ${CMAKE_SOURCE_DIR}/include
