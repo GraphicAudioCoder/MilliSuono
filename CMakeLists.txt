@@ -1,6 +1,6 @@
 
 cmake_minimum_required(VERSION 3.10)
-project(MicroSuono)
+project(MilliSuono)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -15,16 +15,16 @@ add_custom_target(clean-all
 )
 
 # Libreria statica (fix nome file)
-add_library(MicroSuonoLib STATIC
+add_library(MilliSuonoLib STATIC
   src/miniaudio_impl.cpp
 )
-target_include_directories(MicroSuonoLib PUBLIC
+target_include_directories(MilliSuonoLib PUBLIC
   ${CMAKE_SOURCE_DIR}/include
 )
 
 # Eseguibile principale
-add_executable(MicroSuono src/main.cpp)
-target_include_directories(MicroSuono PRIVATE
+add_executable(MilliSuono src/main.cpp)
+target_include_directories(MilliSuono PRIVATE
   ${CMAKE_SOURCE_DIR}/include
 )
-target_link_libraries(MicroSuono MicroSuonoLib)
+target_link_libraries(MilliSuono MilliSuonoLib)
