@@ -110,6 +110,8 @@ protected:
   int currentFadeSample_ = 0;
   bool fadeInActive_ = false;
 
+  class GraphManager *graphManager_ = nullptr;
+
 private:
   /* Update fade-in sample from duration and sample rate */
   void updateFadeInSamples() {
