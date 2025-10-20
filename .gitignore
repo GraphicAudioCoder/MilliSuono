@@ -1,3 +1,6 @@
+# Build artifact
 build/
+# IDE specific files
 compile_commands.json
+# Cache files
 .cache/
