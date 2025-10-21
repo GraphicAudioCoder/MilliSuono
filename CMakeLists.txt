@@ -15,7 +15,7 @@ add_custom_target(clean-all
 
 # Static library (fix file name)
 add_library(MilliSuonoLib STATIC
-  src/miniaudio_impl.cpp
+  src/external/miniaudio_impl.cpp
   src/core/Node.cpp
 )
 target_include_directories(MilliSuonoLib PUBLIC
