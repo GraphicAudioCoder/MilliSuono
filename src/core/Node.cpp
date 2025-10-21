@@ -1,5 +1,5 @@
-#include "Node.hpp"
-#include "GraphManager.hpp"
+#include "core/Node.hpp"
+#include "core/GraphManager.hpp"
 
 namespace ms {
 
