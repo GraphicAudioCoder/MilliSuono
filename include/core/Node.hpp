@@ -65,6 +65,9 @@ public:
   const std::string id;
   std::vector<Param> params;
 
+  /* Set GraphManager reference (called by GraphManager during setup) */
+  void setGraphManager(class GraphManager *graph) { graphManager_ = graph; }
+
 protected:
   /* Apply fade-in to audio buffer */
   void applyFadeIn(float *buffer, int nFrames) {
