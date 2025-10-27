@@ -1,4 +1,4 @@
-# Build artifact
+# Build artifacts
 build/
 # IDE specific files
 compile_commands.json
