@@ -1,0 +1,33 @@
+\doxysection{Port.\+hpp}
+\hypertarget{_port_8hpp_source}{}\label{_port_8hpp_source}\index{include/core/Port.hpp@{include/core/Port.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <variant>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{namespace\ }ms\ \{}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{enum\ class}\ PortType\ \{\ Audio,\ Control,\ \mbox{\hyperlink{structms_1_1_event}{Event}}\ \};}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{using\ }ControlValue\ =\ std::variant<float,\ int,\ bool,\ std::string>;}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structms_1_1_event_abfbf3b253383e392d1d512a20711a351}{Event}}\ \{}
+\DoxyCodeLine{00026\ \ \ std::string\ \mbox{\hyperlink{structms_1_1_event_a9ff3b1e077fbe27fd17ccceac2679994}{type}};\ \ \ }
+\DoxyCodeLine{00027\ \ \ ControlValue\ \mbox{\hyperlink{structms_1_1_event_a78f058fb7ee3971dbcad2ee41b3d1bf7}{value}};\ }
+\DoxyCodeLine{00028\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structms_1_1_event_a458099dcd37aa7c4341aeedee01af436}{sampleOffset}};\ \ \ }
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00036\ \ \ \mbox{\hyperlink{structms_1_1_event_abfbf3b253383e392d1d512a20711a351}{Event}}(\textcolor{keyword}{const}\ std::string\ \&\mbox{\hyperlink{structms_1_1_event_a9ff3b1e077fbe27fd17ccceac2679994}{type}},\ \textcolor{keyword}{const}\ ControlValue\ \&\mbox{\hyperlink{structms_1_1_event_a78f058fb7ee3971dbcad2ee41b3d1bf7}{value}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structms_1_1_event_a458099dcd37aa7c4341aeedee01af436}{sampleOffset}})}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ :\ \mbox{\hyperlink{structms_1_1_event_a9ff3b1e077fbe27fd17ccceac2679994}{type}}(\mbox{\hyperlink{structms_1_1_event_a9ff3b1e077fbe27fd17ccceac2679994}{type}}),\ \mbox{\hyperlink{structms_1_1_event_a78f058fb7ee3971dbcad2ee41b3d1bf7}{value}}(\mbox{\hyperlink{structms_1_1_event_a78f058fb7ee3971dbcad2ee41b3d1bf7}{value}}),\ \mbox{\hyperlink{structms_1_1_event_a458099dcd37aa7c4341aeedee01af436}{sampleOffset}}(\mbox{\hyperlink{structms_1_1_event_a458099dcd37aa7c4341aeedee01af436}{sampleOffset}})\ \{\}}
+\DoxyCodeLine{00038\ \};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00045\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structms_1_1_port_a9888800ef4faa5c21954fa06d494505f}{Port}}\ \{}
+\DoxyCodeLine{00046\ \ \ std::string\ \mbox{\hyperlink{structms_1_1_port_a9fc3167b495cc505bca6d978a7f1b681}{name}};\ }
+\DoxyCodeLine{00047\ \ \ PortType\ \mbox{\hyperlink{structms_1_1_port_a69e92fafc61ac71bfdd7764a04bccfcb}{type}};\ \ \ \ }
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00054\ \ \ \mbox{\hyperlink{structms_1_1_port_a9888800ef4faa5c21954fa06d494505f}{Port}}(\textcolor{keyword}{const}\ std::string\ \&\mbox{\hyperlink{structms_1_1_port_a9fc3167b495cc505bca6d978a7f1b681}{name}},\ PortType\ \mbox{\hyperlink{structms_1_1_port_a69e92fafc61ac71bfdd7764a04bccfcb}{type}})\ :\ \mbox{\hyperlink{structms_1_1_port_a9fc3167b495cc505bca6d978a7f1b681}{name}}(\mbox{\hyperlink{structms_1_1_port_a9fc3167b495cc505bca6d978a7f1b681}{name}}),\ \mbox{\hyperlink{structms_1_1_port_a69e92fafc61ac71bfdd7764a04bccfcb}{type}}(\mbox{\hyperlink{structms_1_1_port_a69e92fafc61ac71bfdd7764a04bccfcb}{type}})\ \{\}}
+\DoxyCodeLine{00055\ \};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \}\ \textcolor{comment}{//\ namespace\ ms}}
+
+\end{DoxyCode}
