@@ -13,7 +13,6 @@ include_directories(
 
 add_library(MilliSuonoLib STATIC
   src/external/miniaudio_impl.cpp
-  src/core/Node.cpp
 )
 
 add_executable(MilliSuono src/main.cpp)
