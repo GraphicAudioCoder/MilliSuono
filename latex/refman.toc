@@ -8,10 +8,20 @@
 \contentsline {subsection}{\numberline {3.1.1}Detailed Description}{5}{subsection.3.1.1}%
 \contentsline {subsection}{\numberline {3.1.2}Constructor \& Destructor Documentation}{5}{subsection.3.1.2}%
 \contentsline {subsubsection}{\numberline {3.1.2.1}Event()}{5}{subsubsection.3.1.2.1}%
-\contentsline {section}{\numberline {3.2}ms\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Port Struct Reference}{6}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Detailed Description}{6}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Constructor \& Destructor Documentation}{6}{subsection.3.2.2}%
-\contentsline {subsubsection}{\numberline {3.2.2.1}Port()}{6}{subsubsection.3.2.2.1}%
+\contentsline {section}{\numberline {3.2}ms\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Node Class Reference}{6}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Constructor \& Destructor Documentation}{6}{subsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.1.1}Node()}{6}{subsubsection.3.2.1.1}%
+\contentsline {subsection}{\numberline {3.2.2}Member Function Documentation}{6}{subsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.2.1}getId()}{6}{subsubsection.3.2.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2.2}getParams()}{7}{subsubsection.3.2.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.2.3}setParams()}{7}{subsubsection.3.2.2.3}%
+\contentsline {section}{\numberline {3.3}ms\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Param Struct Reference}{7}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Detailed Description}{7}{subsection.3.3.1}%
+\contentsline {section}{\numberline {3.4}ms\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::Port Struct Reference}{8}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Detailed Description}{8}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Constructor \& Destructor Documentation}{8}{subsection.3.4.2}%
+\contentsline {subsubsection}{\numberline {3.4.2.1}Port()}{8}{subsubsection.3.4.2.1}%
 \contentsline {chapter}{\numberline {4}File Documentation}{9}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Port.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{9}{section.4.1}%
-\contentsline {chapter}{Index}{11}{section*.5}%
+\contentsline {section}{\numberline {4.1}Node.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{9}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Port.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{9}{section.4.2}%
+\contentsline {chapter}{Index}{11}{section*.7}%

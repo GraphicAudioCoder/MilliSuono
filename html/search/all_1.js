@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['name_0',['name',['../structms_1_1_port.html#a9fc3167b495cc505bca6d978a7f1b681',1,'ms::Port']]]
+  ['getid_0',['getId',['../classms_1_1_node.html#a09711f0d96ffa865fba844cb5930c14d',1,'ms::Node']]],
+  ['getparams_1',['getParams',['../classms_1_1_node.html#a8f82891eced550ac1252c33f8c89720a',1,'ms::Node']]]
 ];

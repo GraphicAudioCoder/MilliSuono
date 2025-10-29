@@ -2,6 +2,33 @@
 \hypertarget{_node_8hpp_source}{}\label{_node_8hpp_source}\index{include/core/Node.hpp@{include/core/Node.hpp}}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}Port.hpp"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <unordered\_map>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }ms\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structms_1_1_param}{Param}}\ \{}
+\DoxyCodeLine{00014\ \ \ std::string\ \mbox{\hyperlink{structms_1_1_param_a02c46666b2c5b4a5c27d33f986de1898}{name}};\ \ \ }
+\DoxyCodeLine{00015\ \ \ ControlValue\ \mbox{\hyperlink{structms_1_1_param_abdfdfd8df00ef48d72a64c7b1f739438}{value}};\ }
+\DoxyCodeLine{00016\ \};}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classms_1_1_node_a8717965611dbadcd49386110b6fbf211}{Node}}\ \{}
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \mbox{\hyperlink{classms_1_1_node_a8717965611dbadcd49386110b6fbf211}{Node}}(\textcolor{keyword}{const}\ std::string\ \&\textcolor{keywordtype}{id})\ :\ id(id)\ \{\}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00028\ \ \ \textcolor{keyword}{const}\ std::string\ \&\mbox{\hyperlink{classms_1_1_node_a09711f0d96ffa865fba844cb5930c14d}{getId}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ id;\ \}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00032\ \ \ \textcolor{keyword}{const}\ std::vector<Param>\ \&\mbox{\hyperlink{classms_1_1_node_a8f82891eced550ac1252c33f8c89720a}{getParams}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ params;\ \}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00038\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classms_1_1_node_ac399af5dd9ea50409bb7c8b216df3437}{setParams}}(\textcolor{keyword}{const}\ std::vector<Param>\ \&newParams)\ \{\ params\ =\ newParams;\ \}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00041\ \ \ \textcolor{keyword}{const}\ std::string\ id;\ \ \ \ \ \ }
+\DoxyCodeLine{00042\ \ \ std::vector<Param>\ params;\ }
+\DoxyCodeLine{00043\ \};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \}\ \textcolor{comment}{//\ namespace\ ms}}
 
 \end{DoxyCode}

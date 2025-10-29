@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2025.5.10)  28 OCT 2025 21:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2025.5.10)  29 OCT 2025 15:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -950,6 +950,9 @@ LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 
 LaTeX Warning: Label `doc-constructors' multiply defined.
 
+
+LaTeX Warning: Label `doc-constructors' multiply defined.
+
 )
 \openout1 = `refman.aux'.
 
@@ -1167,23 +1170,34 @@ LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
 (Font)              scaled to size 6.29996pt on input line 57.
 
 
-[5]) (structms_1_1_port.tex
+[5]) (classms_1_1_node.tex
+LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
+(Font)              scaled to size 8.99994pt on input line 49.
 
-[6])
+Underfull \hbox (badness 10000) detected at line 49
+[][][]
+ []
 
-[7]
 
-[8
+
+[6]
+Underfull \hbox (badness 10000) detected at line 62
+[][][]
+ []
+
+) (structms_1_1_param.tex) (structms_1_1_port.tex
+
+[7])
+
+[8]
+Chapter 4.
+(_node_8hpp_source.tex) (_port_8hpp_source.tex)
+
+[9
 
 ]
-Chapter 4.
-(_port_8hpp_source.tex)
 
-[9]
-
-[10
-
-] (refman.ind
+[10] (refman.ind
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 22.39185pt on input line 1.
 
@@ -1191,6 +1205,7 @@ LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 
 
 [11
+
 
 
 
@@ -1204,30 +1219,33 @@ L3 programming layer <2025-04-14>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: 0539C8F63141F4CB798900B554FAB465;2686.
+(rerunfilecheck)             Checksum: 73E64134128DE04BCBAB98B6DEC6CBC6;4622.
  ) 
 Here is how much of TeX's memory you used:
- 20282 strings out of 471882
- 365960 string characters out of 2517821
- 766264 words of memory out of 3000000
- 46465 multiletter control sequences out of 15000+600000
- 674900 words of font info for 91 fonts, out of 8000000 for 9000
+ 20380 strings out of 471882
+ 368303 string characters out of 2517821
+ 767804 words of memory out of 3000000
+ 46521 multiletter control sequences out of 15000+600000
+ 681169 words of font info for 107 fonts, out of 8000000 for 9000
  0 hyphenation exceptions out of 8191
  103i,15n,117p,1505b,1093s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/Users/riccardogiovannirosso/Library/Application Support/MiKTeX/texmfs/insta
 ll/fonts/enc/dvips/base/8r.enc}</Users/riccardogiovannirosso/Library/Applicatio
 n Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi10.pfb></Use
 rs/riccardogiovannirosso/Library/Application Support/MiKTeX/texmfs/install/font
-s/type1/urw/courier/ucrr8a.pfb></Users/riccardogiovannirosso/Library/Applicatio
-n Support/MiKTeX/texmfs/install/fonts/type1/urw/courier/ucrro8a.pfb></Users/ric
+s/type1/public/amsfonts/cm/cmmi8.pfb></Users/riccardogiovannirosso/Library/Appl
+ication Support/MiKTeX/texmfs/install/fonts/type1/urw/courier/ucrr8a.pfb></User
+s/riccardogiovannirosso/Library/Application Support/MiKTeX/texmfs/install/fonts
+/type1/urw/courier/ucrro8a.pfb></Users/riccardogiovannirosso/Library/Applicatio
+n Support/MiKTeX/texmfs/install/fonts/type1/urw/helvetic/uhvb8a.pfb></Users/ric
 cardogiovannirosso/Library/Application Support/MiKTeX/texmfs/install/fonts/type
-1/urw/helvetic/uhvb8a.pfb></Users/riccardogiovannirosso/Library/Application Sup
-port/MiKTeX/texmfs/install/fonts/type1/urw/helvetic/uhvr8a.pfb></Users/riccardo
-giovannirosso/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw
-/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (15 pages, 101721 bytes).
+1/urw/helvetic/uhvb8ac.pfb></Users/riccardogiovannirosso/Library/Application Su
+pport/MiKTeX/texmfs/install/fonts/type1/urw/helvetic/uhvr8a.pfb></Users/riccard
+ogiovannirosso/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/ur
+w/helvetic/uhvro8a.pfb>
+Output written on refman.pdf (15 pages, 139866 bytes).
 PDF statistics:
- 252 PDF objects out of 1000 (max. 8388607)
- 47 named destinations out of 1000 (max. 500000)
- 129 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 374 PDF objects out of 1000 (max. 8388607)
+ 72 named destinations out of 1000 (max. 500000)
+ 209 words of extra memory for PDF output out of 10000 (max. 10000000)
 

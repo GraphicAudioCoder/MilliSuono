@@ -91,7 +91,45 @@ $(function(){initNavTree('_node_8hpp_source.html','',''); });
   <div class="headertitle"><div class="title">Node.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;Port.hpp&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">namespace </span>ms {</div>
+<div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="structms_1_1_param.html">   13</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structms_1_1_param.html">Param</a> {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="structms_1_1_param.html#a02c46666b2c5b4a5c27d33f986de1898">   14</a></span>  std::string <a class="code hl_variable" href="structms_1_1_param.html#a02c46666b2c5b4a5c27d33f986de1898">name</a>;   </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="structms_1_1_param.html#abdfdfd8df00ef48d72a64c7b1f739438">   15</a></span>  ControlValue <a class="code hl_variable" href="structms_1_1_param.html#abdfdfd8df00ef48d72a64c7b1f739438">value</a>; </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>};</div>
+</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="};">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classms_1_1_node.html">   18</a></span><span class="keyword">class </span><a class="code hl_function" href="classms_1_1_node.html#a8717965611dbadcd49386110b6fbf211">Node</a> {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="classms_1_1_node.html#a8717965611dbadcd49386110b6fbf211">   24</a></span>  <a class="code hl_function" href="classms_1_1_node.html#a8717965611dbadcd49386110b6fbf211">Node</a>(<span class="keyword">const</span> std::string &amp;<span class="keywordtype">id</span>) : id(id) {}</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classms_1_1_node.html#a09711f0d96ffa865fba844cb5930c14d">   28</a></span>  <span class="keyword">const</span> std::string &amp;<a class="code hl_function" href="classms_1_1_node.html#a09711f0d96ffa865fba844cb5930c14d">getId</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> id; }</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="classms_1_1_node.html#a8f82891eced550ac1252c33f8c89720a">   32</a></span>  <span class="keyword">const</span> std::vector&lt;Param&gt; &amp;<a class="code hl_function" href="classms_1_1_node.html#a8f82891eced550ac1252c33f8c89720a">getParams</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> params; }</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="classms_1_1_node.html#ac399af5dd9ea50409bb7c8b216df3437">   38</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classms_1_1_node.html#ac399af5dd9ea50409bb7c8b216df3437">setParams</a>(<span class="keyword">const</span> std::vector&lt;Param&gt; &amp;newParams) { params = newParams; }</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  <span class="keyword">const</span> std::string id;      </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  std::vector&lt;Param&gt; params; </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>};</div>
+</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>} <span class="comment">// namespace ms</span></div>
+<div class="ttc" id="aclassms_1_1_node_html_a09711f0d96ffa865fba844cb5930c14d"><div class="ttname"><a href="classms_1_1_node.html#a09711f0d96ffa865fba844cb5930c14d">ms::Node::getId</a></div><div class="ttdeci">const std::string &amp; getId() const</div><div class="ttdoc">Retrieves the unique identifier (id) of the node.</div><div class="ttdef"><b>Definition</b> Node.hpp:28</div></div>
+<div class="ttc" id="aclassms_1_1_node_html_a8717965611dbadcd49386110b6fbf211"><div class="ttname"><a href="classms_1_1_node.html#a8717965611dbadcd49386110b6fbf211">ms::Node::Node</a></div><div class="ttdeci">Node(const std::string &amp;id)</div><div class="ttdoc">Constructor to initialize a Node.</div><div class="ttdef"><b>Definition</b> Node.hpp:24</div></div>
+<div class="ttc" id="aclassms_1_1_node_html_a8f82891eced550ac1252c33f8c89720a"><div class="ttname"><a href="classms_1_1_node.html#a8f82891eced550ac1252c33f8c89720a">ms::Node::getParams</a></div><div class="ttdeci">const std::vector&lt; Param &gt; &amp; getParams() const</div><div class="ttdoc">Retrieves the list of parameters (Param) for the node.</div><div class="ttdef"><b>Definition</b> Node.hpp:32</div></div>
+<div class="ttc" id="aclassms_1_1_node_html_ac399af5dd9ea50409bb7c8b216df3437"><div class="ttname"><a href="classms_1_1_node.html#ac399af5dd9ea50409bb7c8b216df3437">ms::Node::setParams</a></div><div class="ttdeci">void setParams(const std::vector&lt; Param &gt; &amp;newParams)</div><div class="ttdoc">Sets a new list of parameters for the node.</div><div class="ttdef"><b>Definition</b> Node.hpp:38</div></div>
+<div class="ttc" id="astructms_1_1_param_html"><div class="ttname"><a href="structms_1_1_param.html">ms::Param</a></div><div class="ttdoc">Structure representing a parameter.</div><div class="ttdef"><b>Definition</b> Node.hpp:13</div></div>
+<div class="ttc" id="astructms_1_1_param_html_a02c46666b2c5b4a5c27d33f986de1898"><div class="ttname"><a href="structms_1_1_param.html#a02c46666b2c5b4a5c27d33f986de1898">ms::Param::name</a></div><div class="ttdeci">std::string name</div><div class="ttdoc">The name of the parameter.</div><div class="ttdef"><b>Definition</b> Node.hpp:14</div></div>
+<div class="ttc" id="astructms_1_1_param_html_abdfdfd8df00ef48d72a64c7b1f739438"><div class="ttname"><a href="structms_1_1_param.html#abdfdfd8df00ef48d72a64c7b1f739438">ms::Param::value</a></div><div class="ttdeci">ControlValue value</div><div class="ttdoc">The value of the parameter.</div><div class="ttdef"><b>Definition</b> Node.hpp:15</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

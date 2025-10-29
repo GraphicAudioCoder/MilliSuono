@@ -5,18 +5,42 @@
 
   \indexspace
 
+  \item {getId}
+    \subitem {ms::Node}, \hyperpage{6}
+  \item {getParams}
+    \subitem {ms::Node}, \hyperpage{6}
+
+  \indexspace
+
+  \item {include/core/Node.hpp}, \hyperpage{9}
   \item {include/core/Port.hpp}, \hyperpage{9}
 
   \indexspace
 
   \item {ms::Event}, \hyperpage{5}
     \subitem {Event}, \hyperpage{5}
-  \item {ms::Port}, \hyperpage{6}
-    \subitem {Port}, \hyperpage{6}
+  \item {ms::Node}, \hyperpage{6}
+    \subitem {getId}, \hyperpage{6}
+    \subitem {getParams}, \hyperpage{6}
+    \subitem {Node}, \hyperpage{6}
+    \subitem {setParams}, \hyperpage{7}
+  \item {ms::Param}, \hyperpage{7}
+  \item {ms::Port}, \hyperpage{8}
+    \subitem {Port}, \hyperpage{8}
+
+  \indexspace
+
+  \item {Node}
+    \subitem {ms::Node}, \hyperpage{6}
 
   \indexspace
 
   \item {Port}
-    \subitem {ms::Port}, \hyperpage{6}
+    \subitem {ms::Port}, \hyperpage{8}
+
+  \indexspace
+
+  \item {setParams}
+    \subitem {ms::Node}, \hyperpage{7}
 
 \end{theindex}
