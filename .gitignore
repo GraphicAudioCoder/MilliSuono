@@ -4,3 +4,7 @@ build/
 compile_commands.json
 # Cache files
 .cache/
+# Documentation
+Doxyfile
+html/
+latex/
