@@ -11,6 +11,7 @@ html/
 latex/*
 !latex/refman.pdf
 docs/
+output/
 
 # File di sistema e temporanei
 .DS_Store
