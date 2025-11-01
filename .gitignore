@@ -4,9 +4,14 @@ build/
 compile_commands.json
 # Cache files
 .cache/
-# Documentation
+
+# Documentazione: mantieni solo latex/refman.pdf
 Doxyfile
 html/
-latex/
+latex/*
 !latex/refman.pdf
 docs/
+
+# File di sistema e temporanei
+.DS_Store
+Doxyfile.core

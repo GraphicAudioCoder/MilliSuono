@@ -1,0 +1,40 @@
+% MilliSuono Documentation - Custom LaTeX Preamble
+% NOTE: This is inserted BEFORE Doxygen's own packages, so we only define colors
+% and configure settings that won't conflict
+% Define custom colors (before hyperref is loaded by Doxygen)
+\definecolor{linkcolor}{RGB}{0,102,204}
+\definecolor{sectioncolor}{RGB}{0,102,153}
+\definecolor{codecolor}{RGB}{60,60,60}
+\chapter{Directory Hierarchy}
+\input{dirs}
+\chapter{Namespace Index}
+\input{namespaces}
+\chapter{Class Index}
+\input{annotated}
+\chapter{File Index}
+\input{files}
+\chapter{Directory Documentation}
+\input{dir_3d69f64eaf81436fe2b22361382717e5}
+\input{dir_d44c64559bbebec7f509842c48db8b23}
+\chapter{Namespace Documentation}
+\input{namespacems}
+\chapter{Class Documentation}
+\input{structms_1_1_event}
+\input{classms_1_1_node}
+\input{structms_1_1_param}
+\input{structms_1_1_port}
+\chapter{File Documentation}
+\input{_node_8hpp}
+\input{_node_8hpp_source}
+\input{_port_8hpp}
+\input{_port_8hpp_source}
+%--- End generated contents ---
+% Index
+  \backmatter
+  \newpage
+  \phantomsection
+  \clearemptydoublepage
+  \addcontentsline{toc}{chapter}{\indexname}
+  \printindex
+% Required for some languages (in combination with latexdocumentpre from the header)
+\end{document}
