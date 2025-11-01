@@ -112,6 +112,12 @@ public:
   }
 
   /**
+   * @brief Gets the fade-in duration in milliseconds.
+   * @return The fade-in duration in milliseconds.
+   */
+  float getFadeInDuration() const { return fadeInDurationMs_; }
+
+  /**
    * @brief Sets fade-in duration in milliseconds.
    * @param durationMs The fade-in duration in milliseconds (0 = disabled,
    * default = 50ms).
@@ -120,12 +126,6 @@ public:
     fadeInDurationMs_ = durationMs;
     updateFadeInSamples();
   }
-
-  /**
-   * @brief Gets the fade-in duration in milliseconds.
-   * @return The fade-in duration in milliseconds.
-   */
-  float getFadeInDuration() const { return fadeInDurationMs_; }
 
   /**
    * @brief Resets the fade-in effect to start from the beginning
