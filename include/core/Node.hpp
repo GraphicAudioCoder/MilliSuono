@@ -112,6 +112,31 @@ public:
   }
 
   /**
+   * @brief Sets fade-in duration in milliseconds.
+   * @param durationMs The fade-in duration in milliseconds (0 = disabled,
+   * default = 50ms).
+   */
+  void setFadeInDuration(float durationMs) {
+    fadeInDurationMs_ = durationMs;
+    updateFadeInSamples();
+  }
+
+  /**
+   * @brief Gets the fade-in duration in milliseconds.
+   * @return The fade-in duration in milliseconds.
+   */
+  float getFadeInDuration() const { return fadeInDurationMs_; }
+
+  /**
+   * @brief Resets the fade-in effect to start from the beginning
+   * (useful when re-activating a node).
+   */
+  void resetFadeIn() {
+    currentFadeInSample_ = 0;
+    fadeInActive_ = (fadeInDurationMs_ > 0.0f);
+  }
+
+  /**
    * @brief Returns the list of input ports for the Node.
    * @return A const reference to the vector of input Ports.
    */
@@ -124,11 +149,13 @@ public:
   const std::vector<Port> &getOutputPorts() const { return outputPorts_; }
 
 protected:
-  /** The list of input ports for the Node. */
-  std::vector<Port> inputPorts_;
-
-  /** The list of output ports for the Node. */
-  std::vector<Port> outputPorts_;
+  /**
+   * @brief Applies fade-in envelope to an audio buffer
+   * Subclasses should call this at the end of process() on their output buffers
+   * @param buffer The audio buffer to apply fade-in to.
+   * @param nFrames The number of frames in the buffer.
+   */
+  void applyFadeIn(float *buffer, int nFrames);
 
   /**
    * @brief Adds an input port to the Node.
@@ -157,12 +184,41 @@ protected:
    */
   const float *getPhysicalInput(int channelIndex) const;
 
+  /** The list of input ports for the Node. */
+  std::vector<Port> inputPorts_;
+
+  /** The list of output ports for the Node. */
+  std::vector<Port> outputPorts_;
+
+  /** The sample rate at which the Node operates. */
+  int sampleRate_ = 44100;
+  /** The block size for processing audio samples. */
+  int blockSize_ = 512;
+
 private:
   /** The unique identifier of the Node. */
   const std::string id_;
 
   /** The list of parameters associated with the Node. */
   std::vector<Param> params_;
+
+  /** The duration of the fade-in effect in milliseconds. */
+  float fadeInDurationMs_ = 50.0f;
+  /** The number of samples over which the fade-in effect occurs. */
+  int fadeInSamples_ = 0;
+  /** The current sample index within the fade-in effect. */
+  int currentFadeInSample_ = 0;
+  /** Flag indicating whether the fade-in effect is active. */
+  bool fadeInActive_ = false;
+
+  /**
+   * @brief Updates the number of samples for the fade-in effect based on the
+   * current duration and sample rate.
+   */
+  void updateFadeInSamples() {
+    fadeInSamples_ = static_cast<int>((fadeInDurationMs_ / 1000.0f) *
+                                      static_cast<float>(sampleRate_));
+  }
 };
 
 } // namespace ms
