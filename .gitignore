@@ -8,4 +8,5 @@ compile_commands.json
 Doxyfile
 html/
 latex/
+!latex/refman.pdf
 docs/
