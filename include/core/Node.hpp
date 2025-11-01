@@ -22,12 +22,17 @@ namespace ms {
  * or mode.
  */
 struct Param {
-  /** The unique name identifying the paraemter. */
+  /** The unique name identifying the parameter. */
   std::string name;
+
   /** The current value of the parameter. */
   ControlValue value;
 
-  /** Constuctor for convenience. */
+  /**
+   * @brief Constructs a Param with a given name and value.
+   * @param paramName The name of the parameter.
+   * @param paramValue The value of the parameter.
+   */
   Param(const std::string &paramName, const ControlValue &paramValue)
       : name(paramName), value(paramValue) {}
 };
@@ -106,20 +111,58 @@ public:
     return false;
   }
 
+  /**
+   * @brief Returns the list of input ports for the Node.
+   * @return A const reference to the vector of input Ports.
+   */
+  const std::vector<Port> &getInputPorts() const { return inputPorts_; }
+
+  /**
+   * @brief Returns the list of output ports for the Node.
+   * @return A const reference to the vector of output Ports.
+   */
+  const std::vector<Port> &getOutputPorts() const { return outputPorts_; }
+
 protected:
+  /** The list of input ports for the Node. */
+  std::vector<Port> inputPorts_;
+
+  /** The list of output ports for the Node. */
+  std::vector<Port> outputPorts_;
+
+  /**
+   * @brief Adds an input port to the Node.
+   * @param name The name of the input port.
+   * @param type The type of the input port.
+   */
+  void addInputPort(const std::string &name, PortType type) {
+    inputPorts_.push_back(Port(name, type));
+  }
+
+  /**
+   * @brief Adds an output port to the Node.
+   * @param name The name of the output port.
+   * @param type The type of the output port.
+   */
+  void addOutputPort(const std::string &name, PortType type) {
+    outputPorts_.push_back(Port(name, type));
+  }
+
+  /**
+   * @brief Get physical audio input from hardware
+   * For nodes that need direct hardware access (e.g., audio input nodes)
+   * @param channelIndex The Physical channel index to read from
+   * @return Pointer to the float buffer of the physical input channel or
+   * nullptr
+   */
+  const float *getPhysicalInput(int channelIndex) const;
+
 private:
   /** The unique identifier of the Node. */
   const std::string id_;
+
   /** The list of parameters associated with the Node. */
   std::vector<Param> params_;
-  /**
-   * @brief The list of input ports for the Node.
-   */
-  std::vector<Port> inputPorts_;
-  /**
-   * @brief The list of output ports for the Node.
-   */
-  std::vector<Port> outputPorts_;
 };
 
 } // namespace ms
