@@ -148,6 +148,13 @@ public:
    */
   const std::vector<Port> &getOutputPorts() const { return outputPorts_; }
 
+  /**
+   * @brief Prepares the Node for processing.
+   * This function initializes the Node with the given sample rate and block
+   * size.
+   * @param sampleRate The sample rate in Hz.
+   * @param blockSize The block size in samples.
+   */
   virtual void prepare(int sampleRate, int blockSize) {
     sampleRate_ = sampleRate;
     blockSize_ = blockSize;
@@ -165,7 +172,7 @@ public:
    */
   virtual void process(const float *const *inputsm float **outputs, int nFrames) = 0;
 
-  /*
+  /**
    * @brief Processes control data for the Node.
    * Subclasses can override this to handle control data.
    * @param inputControls A map of input control values.
