@@ -148,6 +148,42 @@ public:
    */
   const std::vector<Port> &getOutputPorts() const { return outputPorts_; }
 
+  virtual void prepare(int sampleRate, int blockSize) {
+    sampleRate_ = sampleRate;
+    blockSize_ = blockSize;
+    updateFadeInSamples();
+    currentFadeInSample_ = 0;
+    fadeInActive_ = (fadeInDurationMs_ > 0.0f);
+  }
+
+  /**
+   * @brief Processes audio data for the Node.
+   * This is a pure virtual function that must be implemented by subclasses.
+   * @param inputs An array of input audio buffers.
+   * @param outputs An array of output audio buffers.
+   * @param nFrames The number of frames to process.
+   */
+  virtual void process(const float *const *inputsm float **outputs, int nFrames) = 0;
+
+  /*
+   * @brief Processes control data for the Node.
+   * Subclasses can override this to handle control data.
+   * @param inputControls A map of input control values.
+   * @param outputControls A map to store output control values.
+   */
+  virtual void processControl(
+      const std::unordered_map<std::string, ControlValue> &inputControls,
+      std::unordered_map<std::string, ControlValue> &outputControls) {}
+  /**
+   * @brief Processes events for the Node.
+   * Subclasses can override this to handle events.
+   * @param inputEvents A map of input events.
+   * @param outputEvents A map to store output events.
+   */
+  virtual void processEvent(
+      const std::unordered_map<std::string, Event> &inputEvents,
+      std::unordered_map<std::string, Event> &outputEvents) {}
+
 protected:
   /**
    * @brief Applies fade-in envelope to an audio buffer
