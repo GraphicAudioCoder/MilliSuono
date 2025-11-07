@@ -170,7 +170,7 @@ public:
    * @param outputs An array of output audio buffers.
    * @param nFrames The number of frames to process.
    */
-  virtual void process(const float *const *inputsm float **outputs, int nFrames) = 0;
+  virtual void process(const float *const *inputs, float **outputs, int nFrames) = 0;
 
   /**
    * @brief Processes control data for the Node.

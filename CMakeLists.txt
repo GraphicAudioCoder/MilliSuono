@@ -8,11 +8,13 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 include_directories(
   ${CMAKE_SOURCE_DIR}/include
+  ${CMAKE_SOURCE_DIR}/include/core
   ${CMAKE_SOURCE_DIR}/include/external
 )
 
 add_library(MilliSuonoLib STATIC
   src/external/miniaudio_impl.cpp
+  src/core/Node.cpp
 )
 
 add_executable(MilliSuono src/main.cpp)
