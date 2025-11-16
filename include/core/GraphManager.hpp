@@ -43,6 +43,29 @@ struct Connection {
 };
 
 class GraphManager {
+public:
+  /** 
+   * @brief Constructs a GraphManager instance.
+   */
+  GraphManager();
+
+  /** 
+   * @brief Destructs the GraphManager instance.
+   */
+  ~GraphManager();
+
+  /** 
+   * Creates a new node with the given ID and adds it to the graph.
+   * @param id The unique identifier for the node.
+   * @param node The node object to add to the graph.
+   * @return NodePtr to the added node.
+   */
+  NodePtr createNode(const std::string& id, NodePtr node);
+
+  /**
+   * @brief Removes a node from the graph by its ID.
+  bool removeNode(const std::string& id);
+  
 private:
 
   /** 
@@ -82,19 +105,19 @@ private:
   std::vector<Connection> connections_;
 
   /** 
-   * Maps node names to their audio buffers (matrices of floats). Each node 
+   * Maps node names to their output audio buffers (matrices of floats). Each node 
    * can have one or more audio channels, each with its own data.
    */
   std::unordered_map<std::string, std::vector<std::vector<float>>> audioBuffers_;
 
   /** 
-   * Maps node names to their control parameters (e.g., volume, frequency). 
+   * Maps node names to their output control parameters (e.g., volume, frequency). 
    * Each node can have multiple controls, identified by name.
    */
   std::unordered_map<std::string, std::unordered_map<std::string, ControlValue>> controlValues_;
 
   /** 
-   * Maps node names to event buffers. Each node can receive different types 
+   * Maps node names to their output event buffers. Each node can receive different types 
    * of events (e.g., triggers, messages), each stored in a vector.
    */
   std::unordered_map<std::string, std::unordered_map<std::string, std::vector<Event>>> eventBuffers_;
@@ -130,5 +153,5 @@ private:
    */
   std::atomic<bool> needsBufferReallocation_{false};
 
-}
+};
 } // namespace ms

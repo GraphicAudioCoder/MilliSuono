@@ -221,7 +221,7 @@ protected:
   /**
    * @brief Get physical audio input from hardware
    * For nodes that need direct hardware access (e.g., audio input nodes)
-   * @param channelIndex The Physical channel index to read from
+   * @param channelIndex The Physical channel index to read from.
    * @return Pointer to the float buffer of the physical input channel or
    * nullptr
    */
