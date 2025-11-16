@@ -63,9 +63,93 @@ public:
   NodePtr createNode(const std::string& id, NodePtr node);
 
   /**
-   * @brief Removes a node from the graph by its ID.
+   * @brief Removes a node and all its connections from the graph by its ID.
+   * @param id The unique identifier of the node to remove.
+   * @return true if the node was successfully removed, false otherwise.
+   */
   bool removeNode(const std::string& id);
+
+  /** 
+   * Retrieves a node by its ID.
+   * @param id The unique identifier of the node.
+   * @return NodePtr to the requested node, or nullptr if not found.
+   */
+  NodePtr getNode(const std::string& id) const;
+
+  /** 
+   * Connects the output port of one node to the input port of another node.
+   * @param fromId The ID of the source node.
+   * @param fromPort The name of the output port on the source node.
+   * @param toId The ID of the destination node.
+   * @param toPort The name of the input port on the destination node.
+   */
+  void connect(const std::string &fromId, const std::string &fromPort,
+               const std::string &toId, const std::string &toPort);
+
+  /** 
+   * Disconnects the output port of one node from the input port of another node.
+   * @param fromId The ID of the source node.
+   * @param fromPort The name of the output port on the source node.
+   * @param toId The ID of the destination node.
+   * @param toPort The name of the input port on the destination node.
+   * @return true if the disconnection was successful, false otherwise.
+   */
+  bool disconnect(const std::string &fromId, const std::string &fromPort,
+                  const std::string &toId, const std::string &toPort);
   
+  /**
+   * @brief Disconnects all connections to and from the specified node.
+   * @param nodeId The ID of the node to disconnect.
+   */
+  void disconnectAll(const std::string &nodeId);
+
+  /** 
+   * Clears all nodes and connections from the graph.
+   */
+  void clear();
+
+  /** 
+   * Prepares the graph for processing by allocating necessary buffers and sorting nodes.
+   * @param sampleRate The sample rate for audio processing.
+   * @param blockSize The block size for audio processing.
+   */
+  void prepare(int sampleRate, int blockSize);
+
+  /** 
+   * Processes the graph for a given number of frames.
+   * @param nFrames The number of frames to process.
+   */
+  void process(int nFrames);
+
+  /** 
+   * Retrieves the output audio buffer of a node by its ID and output index.
+   * @param nodeId The unique identifier of the node.
+   * @param outputIndex The index of the output channel (default is 0).
+   * @return Pointer to the float buffer of the requested output channel.
+   */
+  const float *getNodeOutput(const std::string &nodeId, int outputIndex = 0) const;
+
+  /** 
+   * Sets the physical audio input buffer for a specific channel index.
+   * @param channelIndex The index of the physical input channel.
+   * @param data Pointer to the float buffer containing the input data.
+   * @param nFrames The number of frames in the input buffer.
+   */
+  void setPhysicalInput(int channelIndex, const float* data, int nFrames);
+
+  /** 
+   * Retrieves the physical audio input buffer for a specific channel index.
+   * @param channelIndex The index of the physical input channel.
+   * @return Pointer to the float buffer of the physical input channel.
+   */
+  const float* getPhysicalInput(int channelIndex) const;
+
+  /** 
+   * Gets the number of physical audio input channels.
+   * @return The number of physical input channels.
+   */
+  int getNumPhysicalInputs() const { return physicalInputBuffers_.size(); }
+
 private:
 
   /** 
